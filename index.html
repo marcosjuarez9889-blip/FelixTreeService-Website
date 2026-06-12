@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Felix Tree Service - Expert Tree Care in Westchester Since 1981</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .material-symbols-fill { font-family: 'Material Symbols Outlined'; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .shadow-ambient { box-shadow: 0px 4px 20px rgba(31,77,46,0.08); }
+  .shadow-ambient-hover { box-shadow: 0px 8px 30px rgba(31,77,46,0.14); }
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-container-high": "#e7e9e4",
+          "surface-container-low": "#f3f4ef",
+          "surface-tint": "#3a6847",
+          "secondary-fixed": "#ffdcc4",
+          "surface": "#f9faf5",
+          "outline-variant": "#c1c9bf",
+          "on-primary": "#ffffff",
+          "primary-container": "#1f4d2e",
+          "on-surface-variant": "#414941",
+          "surface-container-lowest": "#ffffff",
+          "on-primary-fixed": "#00210d",
+          "inverse-surface": "#2e312e",
+          "on-secondary-container": "#7a5d47",
+          "primary": "#033619",
+          "secondary-container": "#ffd8bd",
+          "primary-fixed": "#bcefc4",
+          "primary-fixed-dim": "#a0d2a9",
+          "surface-container": "#edeee9",
+          "secondary": "#755843",
+          "on-primary-container": "#8cbd95",
+          "on-background": "#1a1c19",
+          "error": "#ba1a1a",
+          "outline": "#717971",
+          "on-surface": "#1a1c19",
+          "surface-container-highest": "#e2e3de",
+          "surface-variant": "#e2e3de",
+          "on-secondary": "#ffffff",
+          "background": "#f9faf5",
+          "inverse-primary": "#a0d2a9"
+        },
+        borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+        spacing: {
+          "base": "8px", "sm": "12px", "xl": "80px",
+          "margin-desktop": "64px", "xs": "4px",
+          "margin-mobile": "16px", "lg": "48px", "md": "24px", "gutter": "24px"
+        },
+        fontFamily: {
+          "body-md": ["Inter"], "label-md": ["Inter"],
+          "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "display-lg": ["Plus Jakarta Sans"]
+        },
+        fontSize: {
+          "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+          "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+          "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+          "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+          "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+          "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased">
+
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-7xl mx-auto">
+    <a href="index.html" class="text-headline-md font-headline-md font-bold text-primary">Felix Tree Service</a>
+    <nav class="hidden md:flex gap-gutter items-center">
+      <a href="index.html" class="text-label-md font-label-md text-primary border-b-2 border-primary pb-1">Home</a>
+      <a href="services.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Services</a>
+      <a href="about.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">About</a>
+      <a href="our-work.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Our Work</a>
+      <a href="reviews.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Reviews</a>
+      <a href="contact.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Contact</a>
+    </nav>
+    <a href="tel:9149491214" class="hidden md:block bg-primary text-on-primary text-label-md font-label-md px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200">
+      Call (914) 949-1214
+    </a>
+    <button class="md:hidden text-primary" id="mobile-menu-btn">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant/30 px-margin-mobile py-md flex flex-col gap-md">
+    <a href="index.html" class="text-label-md font-label-md text-primary">Home</a>
+    <a href="services.html" class="text-label-md font-label-md text-on-surface-variant">Services</a>
+    <a href="about.html" class="text-label-md font-label-md text-on-surface-variant">About</a>
+    <a href="our-work.html" class="text-label-md font-label-md text-on-surface-variant">Our Work</a>
+    <a href="reviews.html" class="text-label-md font-label-md text-on-surface-variant">Reviews</a>
+    <a href="contact.html" class="text-label-md font-label-md text-on-surface-variant">Contact</a>
+    <a href="tel:9149491214" class="bg-primary text-on-primary text-label-md font-label-md px-4 py-2 rounded-lg text-center">Call (914) 949-1214</a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-xl px-margin-mobile md:px-margin-desktop min-h-[520px] flex items-center overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1426170042593-200f250dfdaf?w=1920&h=1080&fit=crop&auto=format&q=85"
+         alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover"/>
+    <div class="absolute inset-0 bg-primary/80"></div>
+    <div class="relative z-10 max-w-7xl mx-auto w-full">
+      <div class="max-w-2xl mx-auto text-center">
+        <h1 class="text-display-lg font-display-lg text-on-primary mb-md">
+          Expert Tree Care in Westchester Since 1981.
+        </h1>
+        <p class="text-body-lg font-body-lg text-primary-fixed-dim mb-lg">
+          Certified arborists for residential &amp; commercial properties — pruning, removal, and 24/7 emergency service.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-sm justify-center">
+          <a href="contact.html" class="bg-primary-fixed text-on-primary-fixed text-label-md font-label-md px-lg py-sm rounded-lg hover:bg-white transition-colors duration-200 shadow-sm">
+            Get a Free Estimate
+          </a>
+          <a href="tel:9149491214" class="border-2 border-primary-fixed text-primary-fixed text-label-md font-label-md px-lg py-sm rounded-lg hover:bg-primary-fixed/10 transition-colors duration-200">
+            Call (914) 949-1214
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services -->
+  <section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-headline-lg font-headline-lg text-on-surface text-center mb-lg">Core Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <!-- Card 1 -->
+        <a href="services.html" class="bg-surface-container-lowest rounded-xl p-md shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300 border border-outline-variant/30 flex flex-col gap-sm group">
+          <div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center">
+            <span class="material-symbols-fill text-primary" style="font-size:28px;">content_cut</span>
+          </div>
+          <h3 class="text-headline-md font-headline-md text-primary">Tree Pruning</h3>
+          <p class="text-on-surface-variant text-body-md font-body-md">Expert structural pruning, crown thinning, and deadwood removal to promote tree health and safety.</p>
+        </a>
+        <!-- Card 2 -->
+        <a href="services.html" class="bg-surface-container-lowest rounded-xl p-md shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300 border border-outline-variant/30 flex flex-col gap-sm group">
+          <div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center">
+            <span class="material-symbols-fill text-primary" style="font-size:28px;">arrow_downward</span>
+          </div>
+          <h3 class="text-headline-md font-headline-md text-primary">Tree &amp; Stump Removal</h3>
+          <p class="text-on-surface-variant text-body-md font-body-md">Safe, efficient removal of hazardous or unwanted trees, followed by complete stump grinding services.</p>
+        </a>
+        <!-- Card 3 -->
+        <a href="services.html" class="bg-surface-container-lowest rounded-xl p-md shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300 border border-outline-variant/30 flex flex-col gap-sm group relative overflow-hidden">
+          <span class="absolute top-3 right-3 bg-error text-on-primary text-[10px] font-bold px-2 py-1 rounded-full">24/7 PRIORITY</span>
+          <div class="w-12 h-12 rounded-lg bg-error/10 flex items-center justify-center">
+            <span class="material-symbols-fill text-error" style="font-size:28px;">thunderstorm</span>
+          </div>
+          <h3 class="text-headline-md font-headline-md text-primary">Storm &amp; Emergency</h3>
+          <p class="text-on-surface-variant text-body-md font-body-md">Rapid response to storm damage. We safely clear fallen limbs and stabilize compromised trees anytime.</p>
+        </a>
+      </div>
+      <div class="text-center mt-lg">
+        <a href="services.html" class="inline-block text-label-md font-label-md text-primary border-b-2 border-primary pb-1 hover:text-primary/80 transition-colors">
+          View all services →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Strip -->
+  <section class="py-lg px-margin-mobile md:px-margin-desktop bg-surface-container-low border-y border-outline-variant/20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row flex-wrap justify-center items-center gap-md md:gap-xl">
+      <div class="flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-primary">verified</span>
+        <span class="text-label-md font-label-md">ISA Certified Arborists</span>
+      </div>
+      <div class="flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-primary">shield</span>
+        <span class="text-label-md font-label-md">Fully Insured</span>
+      </div>
+      <div class="flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-primary">request_quote</span>
+        <span class="text-label-md font-label-md">Free Estimates</span>
+      </div>
+      <div class="flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-primary">calendar_today</span>
+        <span class="text-label-md font-label-md">Serving Since 1981</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="bg-primary py-xl px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-headline-lg font-headline-lg text-on-primary mb-sm">Need a tree handled?</h2>
+      <p class="text-body-lg font-body-lg text-primary-fixed-dim mb-lg">
+        Get your free estimate today. We are ready to help secure your property.
+      </p>
+      <a href="contact.html" class="inline-block bg-primary-fixed text-on-primary-fixed text-label-md font-label-md px-lg py-sm rounded-lg hover:bg-white transition-colors duration-200 shadow-sm">
+        Contact Us Now
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-xl bg-surface-container-highest">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div class="flex flex-col gap-sm">
+      <div class="text-headline-md font-headline-md font-bold text-primary">Felix Tree Service</div>
+      <p class="text-body-md font-body-md text-on-surface-variant mt-sm">
+        © 2024 Felix Tree Service and White Plains Landscaping, Inc. Licensed #5824H94 · Fully Insured · Free Estimates
+      </p>
+    </div>
+    <div class="flex flex-col gap-xs">
+      <h4 class="text-label-md font-label-md text-primary mb-xs">Contact Info</h4>
+      <span class="text-body-md font-body-md text-on-surface-variant">114 North Broadway, White Plains, NY 10603</span>
+      <a href="tel:9149491214" class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors">(914) 949-1214</a>
+      <a href="mailto:manager@felixtree.com" class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors">manager@felixtree.com</a>
+    </div>
+    <div class="flex flex-col gap-xs">
+      <h4 class="text-label-md font-label-md text-primary mb-xs">Credentials</h4>
+      <span class="text-body-md font-body-md text-on-surface-variant">ISA Credential</span>
+      <span class="text-body-md font-body-md text-on-surface-variant">NAA Credential</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>

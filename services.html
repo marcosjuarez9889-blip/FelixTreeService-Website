@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Services - Felix Tree Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-container-high": "#e7e9e4",
+          "surface-container-low": "#f3f4ef",
+          "surface-tint": "#3a6847",
+          "surface": "#f9faf5",
+          "outline-variant": "#c1c9bf",
+          "on-primary": "#ffffff",
+          "primary-container": "#1f4d2e",
+          "on-surface-variant": "#414941",
+          "surface-container-lowest": "#ffffff",
+          "primary": "#033619",
+          "primary-fixed": "#bcefc4",
+          "primary-fixed-dim": "#a0d2a9",
+          "surface-container": "#edeee9",
+          "secondary": "#755843",
+          "on-primary-container": "#8cbd95",
+          "on-background": "#1a1c19",
+          "error": "#ba1a1a",
+          "outline": "#717971",
+          "on-surface": "#1a1c19",
+          "surface-container-highest": "#e2e3de",
+          "background": "#f9faf5"
+        },
+        borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+        spacing: {
+          "base": "8px", "sm": "12px", "xl": "80px",
+          "margin-desktop": "64px", "xs": "4px",
+          "margin-mobile": "16px", "lg": "48px", "md": "24px", "gutter": "24px"
+        },
+        fontFamily: {
+          "body-md": ["Inter"], "label-md": ["Inter"],
+          "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "display-lg": ["Plus Jakarta Sans"]
+        },
+        fontSize: {
+          "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+          "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+          "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+          "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+          "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+          "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .shadow-ambient { box-shadow: 0px 4px 20px rgba(31,77,46,0.08); }
+  .shadow-ambient-hover { box-shadow: 0px 8px 30px rgba(31,77,46,0.12); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md pt-16">
+
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-7xl mx-auto">
+    <a href="index.html" class="text-headline-md font-headline-md font-bold text-primary">Felix Tree Service</a>
+    <nav class="hidden md:flex gap-gutter items-center">
+      <a href="index.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Home</a>
+      <a href="services.html" class="text-label-md font-label-md text-primary border-b-2 border-primary pb-1">Services</a>
+      <a href="about.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">About</a>
+      <a href="our-work.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Our Work</a>
+      <a href="reviews.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Reviews</a>
+      <a href="contact.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Contact</a>
+    </nav>
+    <a href="tel:9149491214" class="hidden md:inline-flex text-on-primary bg-primary text-label-md font-label-md px-md py-base rounded-lg hover:bg-primary-container transition-colors">Call (914) 949-1214</a>
+    <button class="md:hidden text-primary" id="mobile-menu-btn"><span class="material-symbols-outlined">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant/30 px-margin-mobile py-md flex flex-col gap-md">
+    <a href="index.html" class="text-label-md font-label-md text-on-surface-variant">Home</a>
+    <a href="services.html" class="text-label-md font-label-md text-primary">Services</a>
+    <a href="about.html" class="text-label-md font-label-md text-on-surface-variant">About</a>
+    <a href="our-work.html" class="text-label-md font-label-md text-on-surface-variant">Our Work</a>
+    <a href="reviews.html" class="text-label-md font-label-md text-on-surface-variant">Reviews</a>
+    <a href="contact.html" class="text-label-md font-label-md text-on-surface-variant">Contact</a>
+    <a href="tel:9149491214" class="bg-primary text-on-primary text-label-md font-label-md px-4 py-2 rounded-lg text-center">Call (914) 949-1214</a>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+  <!-- Hero -->
+  <section class="text-center mb-xl">
+    <h1 class="text-display-lg font-display-lg text-primary mb-md">Our Services</h1>
+    <p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl mx-auto">Comprehensive tree care and landscaping for homes and businesses.</p>
+  </section>
+
+  <!-- Tree Care -->
+  <section class="mb-xl">
+    <div class="flex items-center mb-lg">
+      <span class="material-symbols-outlined text-primary text-4xl mr-sm">forest</span>
+      <h2 class="text-headline-lg font-headline-lg text-primary">Tree Care</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-surface-tint text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">content_cut</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Tree Pruning</h3>
+        <p class="text-on-surface-variant">Expert trimming to enhance tree health, structure, and aesthetic appeal.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-surface-tint text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">link</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Cabling &amp; Bracing</h3>
+        <p class="text-on-surface-variant">Structural support systems to prevent limb failure and protect property.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-error text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">thunderstorm</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Storm Damage</h3>
+        <span class="inline-block bg-primary-fixed-dim/20 text-primary-container text-label-md font-label-md px-2 py-1 rounded mb-2">Emergency Response</span>
+        <p class="text-on-surface-variant">Rapid, safe clearing of fallen trees and hazardous debris after severe weather.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-surface-tint text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">potted_plant</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Tree Planting</h3>
+        <p class="text-on-surface-variant">Professional species selection and installation for lasting growth.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-surface-tint text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">eco</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Health Care</h3>
+        <p class="text-on-surface-variant">Fertilizing and targeted treatments to manage pests and diseases.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-secondary text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">landscape</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Land Clearing</h3>
+        <p class="text-on-surface-variant">Efficient removal of brush and trees for site preparation.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-secondary text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">block</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Stump Removal</h3>
+        <p class="text-on-surface-variant">Complete grinding and removal of unsightly stumps to below grade.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-surface-tint text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">arrow_downward</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Take-Downs</h3>
+        <p class="text-on-surface-variant">Safe, controlled dismantling and removal of large or dead trees.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-surface-tint text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">policy</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Risk Analysis</h3>
+        <p class="text-on-surface-variant">Professional assessment of tree hazards to ensure property safety.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-secondary text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">local_fire_department</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Firewood</h3>
+        <p class="text-on-surface-variant">Quality seasoned firewood available for delivery.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-outline text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">ac_unit</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Snow Plowing</h3>
+        <p class="text-on-surface-variant">Reliable winter snow removal and ice management services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Landscaping Services -->
+  <section class="mb-xl">
+    <div class="flex items-center mb-lg">
+      <span class="material-symbols-outlined text-secondary text-4xl mr-sm">yard</span>
+      <h2 class="text-headline-lg font-headline-lg text-primary">White Plains Landscaping</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-surface-tint text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">grass</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Gardening &amp; Lawns</h3>
+        <p class="text-on-surface-variant">Comprehensive lawn care, seeding, and garden bed maintenance.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-outline text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">wall_art</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Stone Works &amp; Masonry</h3>
+        <p class="text-on-surface-variant">Custom retaining walls, steps, and decorative stone features.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-secondary text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">deck</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Patios &amp; Sidewalks</h3>
+        <p class="text-on-surface-variant">Design and installation of elegant outdoor living spaces and walkways.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-outline text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">add_road</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Driveways</h3>
+        <p class="text-on-surface-variant">Durable and visually appealing driveway paving and borders.</p>
+      </div>
+      <div class="bg-surface-container-lowest p-md rounded-lg shadow-ambient hover:-translate-y-1 hover:shadow-ambient-hover transition-all duration-300">
+        <span class="material-symbols-outlined text-secondary text-3xl mb-sm block" style="font-variation-settings:'FILL' 1;">agriculture</span>
+        <h3 class="text-headline-md font-headline-md text-primary mb-xs">Excavation</h3>
+        <p class="text-on-surface-variant">Professional grading, trenching, and site preparation services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="bg-surface-container-high rounded-xl p-xl text-center shadow-ambient mt-xl">
+    <h2 class="text-headline-md font-headline-md text-primary mb-sm">Ready to start your project?</h2>
+    <p class="text-body-md font-body-md text-on-surface-variant mb-md font-semibold tracking-wide">Residential · Commercial · Municipal · Utility — Free Estimates</p>
+    <a href="contact.html" class="inline-block bg-primary text-on-primary text-label-md font-label-md px-lg py-sm rounded-lg hover:bg-primary-container transition-colors shadow-md">Request a Quote</a>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-xl bg-surface-container-highest">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div>
+      <span class="text-headline-md font-headline-md font-bold text-primary block mb-sm">Felix Tree Service</span>
+      <p class="text-body-md font-body-md text-on-surface-variant">© 2024 Felix Tree Service and White Plains Landscaping, Inc. Licensed #5824H94 · Fully Insured · Free Estimates</p>
+    </div>
+    <div class="flex flex-col space-y-base">
+      <a class="text-on-surface-variant text-label-md font-label-md hover:text-primary transition-colors duration-200 flex items-center" href="#"><span class="material-symbols-outlined mr-2 text-sm">location_on</span>114 North Broadway, White Plains, NY 10603</a>
+      <a class="text-on-surface-variant text-label-md font-label-md hover:text-primary transition-colors duration-200 flex items-center" href="tel:9149491214"><span class="material-symbols-outlined mr-2 text-sm">call</span>(914) 949-1214</a>
+      <a class="text-on-surface-variant text-label-md font-label-md hover:text-primary transition-colors duration-200 flex items-center" href="mailto:manager@felixtree.com"><span class="material-symbols-outlined mr-2 text-sm">mail</span>manager@felixtree.com</a>
+    </div>
+    <div class="flex flex-col space-y-base md:items-end">
+      <span class="text-on-surface-variant text-label-md font-label-md flex items-center"><span class="material-symbols-outlined mr-2 text-primary">verified</span>ISA Credential</span>
+      <span class="text-on-surface-variant text-label-md font-label-md flex items-center"><span class="material-symbols-outlined mr-2 text-primary">verified</span>NAA Credential</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>

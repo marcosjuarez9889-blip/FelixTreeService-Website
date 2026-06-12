@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Felix Tree Service</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .material-symbols-fill { font-family: 'Material Symbols Outlined'; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-container-high": "#e7e9e4",
+          "surface-container-low": "#f3f4ef",
+          "surface-tint": "#3a6847",
+          "surface": "#f9faf5",
+          "outline-variant": "#c1c9bf",
+          "on-primary": "#ffffff",
+          "primary-container": "#1f4d2e",
+          "on-surface-variant": "#414941",
+          "surface-container-lowest": "#ffffff",
+          "on-primary-fixed": "#00210d",
+          "primary": "#033619",
+          "primary-fixed": "#bcefc4",
+          "primary-fixed-dim": "#a0d2a9",
+          "surface-container": "#edeee9",
+          "secondary": "#755843",
+          "secondary-container": "#ffd8bd",
+          "on-secondary-container": "#7a5d47",
+          "on-primary-container": "#8cbd95",
+          "on-background": "#1a1c19",
+          "outline": "#717971",
+          "on-surface": "#1a1c19",
+          "surface-container-highest": "#e2e3de",
+          "surface-variant": "#e2e3de",
+          "background": "#f9faf5"
+        },
+        borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+        spacing: {
+          "base": "8px", "sm": "12px", "xl": "80px",
+          "margin-desktop": "64px", "xs": "4px",
+          "margin-mobile": "16px", "lg": "48px", "md": "24px", "gutter": "24px"
+        },
+        fontFamily: {
+          "body-md": ["Inter"], "label-md": ["Inter"],
+          "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "display-lg": ["Plus Jakarta Sans"]
+        },
+        fontSize: {
+          "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+          "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+          "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+          "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+          "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+          "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col pt-16">
+
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-7xl mx-auto">
+    <a href="index.html" class="text-headline-md font-headline-md font-bold text-primary">Felix Tree Service</a>
+    <nav class="hidden md:flex gap-gutter items-center">
+      <a href="index.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Home</a>
+      <a href="services.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Services</a>
+      <a href="about.html" class="text-label-md font-label-md text-primary border-b-2 border-primary pb-1">About</a>
+      <a href="our-work.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Our Work</a>
+      <a href="reviews.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Reviews</a>
+      <a href="contact.html" class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200">Contact</a>
+    </nav>
+    <a href="tel:9149491214" class="hidden md:block bg-primary text-on-primary text-label-md font-label-md px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200">Call (914) 949-1214</a>
+    <button class="md:hidden text-primary" id="mobile-menu-btn"><span class="material-symbols-outlined">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant/30 px-margin-mobile py-md flex flex-col gap-md">
+    <a href="index.html" class="text-label-md font-label-md text-on-surface-variant">Home</a>
+    <a href="services.html" class="text-label-md font-label-md text-on-surface-variant">Services</a>
+    <a href="about.html" class="text-label-md font-label-md text-primary">About</a>
+    <a href="our-work.html" class="text-label-md font-label-md text-on-surface-variant">Our Work</a>
+    <a href="reviews.html" class="text-label-md font-label-md text-on-surface-variant">Reviews</a>
+    <a href="contact.html" class="text-label-md font-label-md text-on-surface-variant">Contact</a>
+    <a href="tel:9149491214" class="bg-primary text-on-primary text-label-md font-label-md px-4 py-2 rounded-lg text-center">Call (914) 949-1214</a>
+  </div>
+</header>
+
+<main class="flex-grow">
+  <!-- Hero -->
+  <section class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto py-xl">
+    <div class="max-w-3xl">
+      <h1 class="text-display-lg font-display-lg text-on-surface mb-sm">About Felix Tree Service.</h1>
+      <p class="text-body-lg font-body-lg text-on-surface-variant">
+        Founded in 1981 and proudly owned by Felix Salazar, we are a specialized division of White Plains Landscaping, Inc. dedicated to the highest standards of arboriculture and property stewardship.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-Column Story -->
+  <section class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto pb-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+      <div class="space-y-md">
+        <h2 class="text-headline-md font-headline-md text-on-surface">Rooted in the Community</h2>
+        <p class="text-body-md font-body-md text-on-surface-variant">
+          For over four decades, we have been the trusted caretakers of the suburban canopy across Westchester County and beyond. Our philosophy marries the rugged demands of technical tree work with the refined expectations of high-end property maintenance.
+        </p>
+        <p class="text-body-md font-body-md text-on-surface-variant">
+          Whether serving a private homeowner looking to protect a generational oak, or a commercial client managing an expansive corporate campus, our approach remains the same: meticulous planning, uncompromising safety, and a deep respect for the natural environment. We don't just remove trees; we manage living landscapes.
+        </p>
+      </div>
+      <div class="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden bg-surface-container shadow-sm group">
+        <img alt="Arborist at work" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1754321871548-61bdbc6f1506?w=1600&h=1000&fit=crop&auto=format&q=85"/>
+        <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-xl"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Grid -->
+  <section class="bg-surface-container-low py-xl px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-lg">
+        <h2 class="text-headline-lg-mobile font-headline-lg-mobile md:text-headline-lg md:font-headline-lg text-on-surface">Why Choose Us</h2>
+        <p class="text-body-md font-body-md text-on-surface-variant mt-xs">Delivering expert care with professional reliability.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+        <div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_20px_rgba(31,77,46,0.08)] hover:-translate-y-1 transition-transform duration-300 flex flex-col gap-sm border border-outline-variant/30">
+          <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+            <span class="material-symbols-fill" style="font-size:28px;">workspace_premium</span>
+          </div>
+          <h3 class="text-label-md font-label-md text-primary mt-sm">Certified Arborists</h3>
+          <p class="text-body-md font-body-md text-on-surface-variant text-sm">Expert knowledge guiding every cut, ensuring the long-term health of your trees.</p>
+        </div>
+        <div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_20px_rgba(31,77,46,0.08)] hover:-translate-y-1 transition-transform duration-300 flex flex-col gap-sm border border-outline-variant/30">
+          <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+            <span class="material-symbols-fill" style="font-size:28px;">request_quote</span>
+          </div>
+          <h3 class="text-label-md font-label-md text-primary mt-sm">Free Estimates</h3>
+          <p class="text-body-md font-body-md text-on-surface-variant text-sm">Transparent, no-obligation assessments to help you make informed decisions.</p>
+        </div>
+        <div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_20px_rgba(31,77,46,0.08)] hover:-translate-y-1 transition-transform duration-300 flex flex-col gap-sm border border-outline-variant/30">
+          <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+            <span class="material-symbols-fill" style="font-size:28px;">shield</span>
+          </div>
+          <h3 class="text-label-md font-label-md text-primary mt-sm">Fully Insured</h3>
+          <p class="text-body-md font-body-md text-on-surface-variant text-sm">Complete peace of mind knowing your property is fully protected during operations.</p>
+        </div>
+        <div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_20px_rgba(31,77,46,0.08)] hover:-translate-y-1 transition-transform duration-300 flex flex-col gap-sm border border-outline-variant/30">
+          <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+            <span class="material-symbols-fill" style="font-size:28px;">emergency</span>
+          </div>
+          <h3 class="text-label-md font-label-md text-primary mt-sm">24/7 Emergency Service</h3>
+          <p class="text-body-md font-body-md text-on-surface-variant text-sm">Rapid response teams ready to handle storm damage and hazardous situations.</p>
+        </div>
+        <div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_20px_rgba(31,77,46,0.08)] hover:-translate-y-1 transition-transform duration-300 flex flex-col gap-sm border border-outline-variant/30 lg:col-span-2 lg:flex-row lg:items-center">
+          <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+            <span class="material-symbols-fill" style="font-size:28px;">home_work</span>
+          </div>
+          <div class="lg:ml-sm">
+            <h3 class="text-label-md font-label-md text-primary mt-sm lg:mt-0">Residential &amp; Commercial</h3>
+            <p class="text-body-md font-body-md text-on-surface-variant text-sm mt-xs">Equipped to handle projects of any scale, from private backyards to corporate estates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials Strip -->
+  <section class="py-lg px-margin-mobile md:px-margin-desktop border-y border-outline-variant/20 bg-surface">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row flex-wrap justify-center items-center gap-md md:gap-xl">
+      <div class="flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-primary">verified</span>
+        <span class="text-label-md font-label-md">ISA Certified</span>
+      </div>
+      <div class="flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-primary">account_balance</span>
+        <span class="text-label-md font-label-md">National Arborist Association</span>
+      </div>
+      <div class="flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-primary">park</span>
+        <span class="text-label-md font-label-md">NYS Turf &amp; Landscape Association</span>
+      </div>
+      <div class="flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-primary">badge</span>
+        <span class="text-label-md font-label-md">NY License #5824H94</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where We Work -->
+  <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto text-center">
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container mb-md">
+      <span class="material-symbols-outlined" style="font-size:32px;">location_on</span>
+    </div>
+    <h2 class="text-headline-md font-headline-md text-on-surface mb-sm">Where We Work</h2>
+    <p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+      Proudly serving communities across <span class="font-bold text-on-surface">Westchester County</span>, <span class="font-bold text-on-surface">Rockland County</span>, <span class="font-bold text-on-surface">Lower Connecticut (Fairfield County)</span>, and <span class="font-bold text-on-surface">New York City</span>.
+    </p>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-xl bg-surface-container-highest">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div class="flex flex-col gap-sm">
+      <div class="text-headline-md font-headline-md font-bold text-primary">Felix Tree Service</div>
+      <p class="text-body-md font-body-md text-on-surface-variant mt-sm">© 2024 Felix Tree Service and White Plains Landscaping, Inc. Licensed #5824H94 · Fully Insured · Free Estimates</p>
+    </div>
+    <div class="flex flex-col gap-xs">
+      <h4 class="text-label-md font-label-md text-primary mb-xs">Contact Us</h4>
+      <span class="text-body-md font-body-md text-on-surface-variant">114 North Broadway, White Plains, NY 10603</span>
+      <a href="tel:9149491214" class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors">(914) 949-1214</a>
+      <a href="mailto:manager@felixtree.com" class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors">manager@felixtree.com</a>
+    </div>
+    <div class="flex flex-col gap-xs">
+      <h4 class="text-label-md font-label-md text-primary mb-xs">Credentials</h4>
+      <span class="text-body-md font-body-md text-on-surface-variant">ISA Credential</span>
+      <span class="text-body-md font-body-md text-on-surface-variant">NAA Credential</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>
