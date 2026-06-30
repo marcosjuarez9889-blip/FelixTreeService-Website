@@ -115,11 +115,12 @@
 
       <!-- Contact Form -->
       <div class="lg:col-span-3">
-        <form id="contact-form" class="bg-surface-container-lowest rounded-xl p-md md:p-lg shadow-ambient border border-outline-variant/20 space-y-md">
+        <form id="contact-form" action="https://formspree.io/f/xeeblydv" method="POST" class="bg-surface-container-lowest rounded-xl p-md md:p-lg shadow-ambient border border-outline-variant/20 space-y-md">
+          <input type="hidden" name="_subject" value="New contact request — Felix Tree Service website"/>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
             <div class="flex flex-col gap-xs">
               <label class="text-label-md font-label-md text-on-surface" for="full-name">Full Name</label>
-              <input class="w-full border border-outline-variant rounded-lg px-md py-sm text-body-md font-body-md text-on-surface bg-surface placeholder:text-outline" id="full-name" name="full-name" placeholder="Jane Doe" type="text" required/>
+              <input class="w-full border border-outline-variant rounded-lg px-md py-sm text-body-md font-body-md text-on-surface bg-surface placeholder:text-outline" id="full-name" name="name" placeholder="Jane Doe" type="text" required/>
             </div>
             <div class="flex flex-col gap-xs">
               <label class="text-label-md font-label-md text-on-surface" for="email">Email Address</label>
@@ -274,11 +275,32 @@
     document.getElementById('mobile-menu').classList.toggle('hidden');
   });
 
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
-    document.getElementById('success-msg').classList.remove('hidden');
-    this.querySelector('button[type="submit"]').disabled = true;
-    this.querySelector('button[type="submit"]').classList.add('opacity-60');
+    var form = this;
+    var btn = form.querySelector('button[type="submit"]');
+    var success = document.getElementById('success-msg');
+    btn.disabled = true;
+    btn.classList.add('opacity-60');
+
+    try {
+      var response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        success.classList.remove('hidden');
+        form.reset();
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      alert('Sorry, something went wrong sending your message. Please call us at (914) 949-1214 or email manager@felixtree.com.');
+      btn.disabled = false;
+      btn.classList.remove('opacity-60');
+    }
   });
 </script>
 </body>
